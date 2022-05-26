@@ -1,0 +1,38 @@
+[
+    {
+        "numb":"1",
+        "name":"Abhishek Chauhan",
+        "place":"Jharkhand",
+        "office":"Chennai",
+        "department":"Software Engineer"
+    },
+    {
+        "numb":"2",
+        "name":"Rahul",
+        "place":"Jharkhand",
+        "office":"Bangalore",
+        "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"3",
+        "name":"Sunil",
+        "place":"Bihar",
+        "office":"Surat",
+        "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"4",
+        "name":"Vijay",
+        "place":"West Bangal",
+        "office":"Noida",
+        "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"5",
+        "name":"Nanu",
+        "place":"Orisa",
+        "office":"Hydrabad",
+        "department":"Software Engineer(Fontend)"
+    }
+
+]

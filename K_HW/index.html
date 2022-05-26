@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homework.css">
+    <style>
+        .Right_view {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .Right_view {
+                padding-top: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="box">Left</div>
+        <!-- <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> -->
+        <div id="display"></div>
+    </div>
+
+    <div id="Right_side" class="Right_view"></div>
+</body>
+<script>
+    let boxes = document.getElementById("display");
+    fetch('data.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+
+    function appendData(data) {
+
+        console.log("data :", data);
+
+        data.forEach(el => {
+            let div = document.createElement("div");
+            div.setAttribute('class', 'inner-div');
+
+
+            let divRound = document.createElement("div");
+            divRound.setAttribute('class', 'circle');
+            let p = document.createElement("p");
+            p.innerText = el.numb;
+
+            let divBottom = document.createElement("div");
+            divBottom.setAttribute('class', 'bottom');
+            let p1 = document.createElement("p");
+            p1.innerText = el.name;
+            let p2 = document.createElement("p");
+            p2.innerText = el.office;
+            let p3 = document.createElement("p");
+            p3.innerText = el.department;
+
+            let p4 = el.place;
+            let p5 = el.department;
+
+            divRound.append(p);
+            divBottom.append(p1, p2, p3);
+
+            div.append(divRound, divBottom)
+
+            boxes.append(div);
+            console.log(p1)
+            let store = {
+                p1: el.name,
+                p2: el.office,
+                p3: el.department,
+                p4,
+                p5
+            }
+
+            div.onclick = () => {
+                showOne(store);
+            }
+        })
+
+    }
+
+    function showOne(store) {
+
+        let side_details = document.getElementById("Right_side");
+        side_details.innerHTML = "";
+        side_details.style.width = "250px";
+
+        // document.getElementById("display").style.marginRight = "250px";
+
+        let pA = document.createElement("p");
+        let pB = document.createElement("p");
+        let pC = document.createElement("p");
+        let pD = document.createElement("p");
+        let pE = document.createElement("p");
+
+        pA.innerText = store.p1;
+        pB.innerText = store.p2;
+        pC.innerText = store.p3;
+        pD.innerText = store.p4;
+        pE.innerText = store.p5;
+
+        side_details.append(pA, pB, pC, pD, pE);
+
+    }
+
+</script>
+
+</html>
