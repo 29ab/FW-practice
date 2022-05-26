@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            /* border: 1px solid blue; */
+            width: 100%;
+            height: 100px;
+            justify-content: space-between;
+        }
+        .size{
+            display:inline-block;
+            border: 1px solid red;
+            /* margin:6px; */
+            height: 100%;
+            width: 15%;
+            column-gap: 2%;
+            background-color: aqua;
+        }
+        .float1{
+            float: left;
+        }
+        /* .float2{
+            float: left;
+
+        } */
+        .float4{
+            float: right;
+            
+        }
+        .float5{
+            float: right;
+        }
+
+        .float6{
+            float:right;
+        }
+        
+        @media only screen and (max-width: 600px){
+            .size{
+                
+                width:100%;
+                height: 30vh;
+            }
+        }
+        @media only screen and (min-width:600px) and (max-width:768px){
+            .size{
+                display: inline-block;
+                width:46%;
+                height: 30vh;
+            }
+            .float1{
+                float: none;
+            }
+            .float4{
+                float: none;
+            }
+            .float5{
+                float: none;
+            }
+            .float6{
+                float: none;
+            }
+        }
+
+        @media only screen and (min-width:768px) and (max-width:1024px){
+            .size{
+                display: inline-block;
+                width:30%;
+                height: 30vh;
+            }
+            .float1{
+                float: none;
+            }
+            .float4{
+                float: none;
+            }
+            .float5{
+                float: none;
+            }
+            .float6{
+                float: none;
+            }
+        }
+
+        @media only screen and (min-width:1024px) and (max-width:1200px){
+            .size{
+                display: inline-block;
+                width:23%;
+                height: 30vh;
+            }
+
+            .float1{
+                float: none;
+            }
+            .float4{
+                float: none;
+            }
+            .float5{
+                float: none;
+            }
+            .float6{
+                float: none;
+            }
+        }
+        /* @media only screen and (min-width:1200px){
+            .size{
+                display: inline-block;
+                width:23%;
+                height: 30vh;
+            }
+        } */
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="size float1">1</div>
+        <div class="size float2">2</div>
+        <div class="size float3">3</div>
+        <div class="size float4">4</div>
+        <div class="size float5">5</div>
+        <div class="size float6">6</div>
+    </div>
+</body>
+</html>
