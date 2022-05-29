@@ -1,3 +1,8 @@
+<!-- 
+    Repeat three colors RGB of n number of boxes - Need to use nth-child(An+B)
+ -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,40 +10,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        #main{
-            display: inline-block;
-            width: 90%;
-            height: 150px;
-            /* border: 1px solid red; */
-        }
-        .width-all{
-            display: inline-block;
-            width: 16%;
-            height: 100%;
-            background-color: aqua;
-        }
-
-        .width-all:nth-child(3n){
-            background-color: blue;
-        }
-        .width-all:nth-child(2),:nth-child(5){
-            background-color: greenyellow;
-        }
-        .width-all:nth-child(1),:nth-child(4){
-            background-color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="psudo_selector.css">
 </head>
 <body>
-    <div id="main">
-        <div class="width-all">1</div>
-        <div class="width-all">2</div>
-        <div class="width-all">3</div>
-        <div class="width-all">4</div>
-        <div class="width-all">5</div>
-        <div class="width-all">6</div>
+
+    <div class="rgb_squares">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <!-- <div class="square"></div> -->
     </div>
+    
 </body>
 </html>
