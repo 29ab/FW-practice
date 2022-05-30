@@ -1,0 +1,39 @@
+#mySlideshow {
+    display: flex;
+    position: relative;
+    /* border: 1px solid red; */
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    background-color:rgb(245, 245, 245);
+    padding:10px 10px 20px 10px;
+    /* animation-delay: 2s; */
+    
+  }
+  
+  .w3-animate-right {
+    position: absolute;
+    animation: animateright 0.8s;
+    /* animation-delay: 12s; */
+  }
+  .w3-animate-right>img {
+    width: 250px;
+    height: 250px;
+    
+  }
+
+
+
+  @keyframes animateright {
+    from {
+      /* transform: translateX(0%); */
+      right: -50px;
+      opacity: 0
+    }
+
+    to {
+      /* transform: translateX(0%); */
+      right: 0px;
+      opacity: 1
+    }
+  }

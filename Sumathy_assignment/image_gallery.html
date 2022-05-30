@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="image_gallery.css">
+    <title>Document</title>
+    <style>
+        #gallery-view{
+            display: inline-block;
+            background-color: #F5F5F5;
+            padding: 10px;
+
+        }
+
+        .gallery-image {
+            /* border: 1px solid red; */
+            width: 100px;
+            /* height: 300px; */
+            display: inline-block;
+            padding: 2px;
+            margin-right: 100px;
+        }
+        .gallery-image > img{
+            width: 100%;
+        }
+
+        .display-big-image{
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            /* border: 1px solid blue; */
+        }
+        .display-big-image > img{
+            display: inline-block;
+            width: 100%;
+            height: 300px;
+            /* border: 1px solid blue; */
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Gallery</h2>
+    <div id="gallery-view">
+
+    </div>
+</body>
+<script src="image_gallery.js">
+    
+
+    // let Images = JSON.parse(localStorage.getItem('images'));
+    
+    // let main_view = document.getElementById("gallery-view");
+
+    // let div = document.createElement("div"); // div holds the and display all the images from array together
+    // div.setAttribute('class','gallery-image');
+
+    // let display_image = document.createElement("div"); // div to hold and display images in bigger size. 
+    // display_image.setAttribute('class','display-big-image');
+    
+    // let default_image = document.createElement("img"); // to show default 1st image in the array
+    // default_image.src = Images[0];
+    // display_image.append(default_image)
+
+    // Images.forEach(function (el) {
+        
+    //     let image = document.createElement("img");
+    //     image.src = el;
+    //     div.append(image);
+
+    //     image.addEventListener('click',function(){
+    //         showImage(el);
+    //     });
+
+    //     image.addEventListener('mouseover',function(){
+    //         showImage(el);
+    //     })
+       
+    // });
+
+    // function showImage(ele){
+    //     console.log('Element:=',ele)
+    //     display_image.innerHTML = " ";
+    //     let image1 = document.createElement("img");
+    //     image1.src = ele;
+    //     display_image.append(image1)
+    // }
+
+    // main_view.append(div,display_image);
+
+</script>
+</html>
