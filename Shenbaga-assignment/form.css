@@ -1,0 +1,43 @@
+
+#form{
+    display:inline-block;
+    width:45%;
+    background-color:rgb(236, 239, 241);
+    padding:10px;
+    border:1px solid red;
+}
+
+#name > input{
+    width:150px;
+}
+
+#contact > input{
+    width:150px;
+}
+#address > div input{
+    width:150px;
+}
+
+#education > input{
+    width:150px;
+    border:1px solid red;
+}
+div{
+    margin-bottom:20px;
+}
+#marital > input{
+    width:15px;
+} 
+
+span{
+    margin-right:5px;
+}
+#display-information{
+    display:inline-block;
+    width:50%;
+    min-height:450px;
+    border:2px solid blue;
+    background-color:wheat;
+    vertical-align:top;
+
+}
