@@ -40,5 +40,12 @@
         "place":"Orisa",
         "location":"Hydrabad",
         "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"6",
+        "name":"Nanu",
+        "place":"Orisa",
+        "location":"Hydrabad",
+        "department":"Software Engineer(Fontend)"
     }
 ]
