@@ -51,33 +51,4 @@ function showImage(source_link){
 
 main_view.append(display_image);
 
-// display_image.addEventListener('mouseover',  startSlideshow);
-// // display_image.addEventListener('mouseout', function(){
-// //   document.querySelector("img").innerHTML = " ";
-// // })
-
-// function startSlideshow() {
-  
-//     let counter = 0;
-
-//     let interval = setInterval(function () {
-
-//       // container.innerText = 
-//       let div = document.createElement("div");
-//       div.setAttribute("class", "w3-animate-right")
-
-//       if (counter === Images.length) {
-//         counter = 0;
-//       }
-
-//       let img = document.createElement("img");
-//       img.src = Images[counter];
-
-//     div.append(img)
-//     display_image.append(div)
-
-//       counter = counter + 1;
-//     }, 2000);
-//   }
-
 
