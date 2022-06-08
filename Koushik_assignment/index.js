@@ -62,13 +62,10 @@ let Square = document.getElementById("display_cards");
         side_details.innerHTML = "";
         side_details.style.width = "250px";
 
-        // document.getElementById("display").style.marginRight = "250px";
-
         let Name = document.createElement("p");
         let Location = document.createElement("p");
         let Department = document.createElement("p");
         let Cross = document.createElement("button");
-        // Cross.setAttribute('id',cross_button)
         Cross.innerHTML = "&#x2716;";
 
         Name.innerHTML = details.name;
@@ -81,12 +78,9 @@ let Square = document.getElementById("display_cards");
             console.log(arguments)
             minimize_side_model();
         }
-
-       
     }
 
     function minimize_side_model(){
             document.getElementById("Right_side").style.width = "0px";
             document.getElementById("display").style.marginRight = "0px";
-            // document.body.style.backgroundColor = "yellow";
         }

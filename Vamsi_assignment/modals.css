@@ -51,12 +51,9 @@ header>h3 {
     display: inline-block;
 }
 
-
-
 /* Slide model css */
 
 .slide-right-modal {
-    /* border: 10px solid red; */
     display: none;
     position: fixed;
     z-index: 1;
@@ -182,7 +179,6 @@ header>h3 {
 
 
 .hybrid-slide-right-modal {
-    /* border: 10px solid red; */
     display: none;
     position: fixed;
     z-index: 2;
