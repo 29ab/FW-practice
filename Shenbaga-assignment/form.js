@@ -161,12 +161,16 @@ function saveAll() {
     document.getElementById('first-name').value = " ";
     document.getElementById('last-name').value = " ";
     document.getElementById('Email').value = " ";
-    document.getElementById('Single-status').value = " ";
-    document.getElementById('Married-status').value = " ";
-    document.getElementById('Divorced-status').value = " ";
+    let unchecked_single = document.getElementById('Single-status');
+    unchecked_single.checked = false;
+    let unchecked_married = document.getElementById('Married-status');
+    unchecked_married.checked = false;
+    let unchecked_divorced = document.getElementById('Divorced-status');
+    unchecked_divorced.checked = false;
     document.getElementById('degree').value = " ";
     document.getElementById('permanent-address').value = " ";
 
+    Show_result.innerHTML = " ";
 }
 
 document.getElementById('Submit-button').addEventListener('click', function submit(){

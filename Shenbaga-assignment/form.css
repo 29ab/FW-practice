@@ -33,7 +33,8 @@ div{
 span{
     margin-right:5px;
 }
-#display-information{
+
+#parent-display{
     display:inline-block;
     width:40%;
     min-height:300px;
@@ -41,5 +42,8 @@ span{
     vertical-align:top;
     border-radius:10px;
     padding:20px;
-
+}
+#display-information{
+    display:inline-block;
+    width:100%;
 }

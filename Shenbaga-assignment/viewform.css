@@ -1,5 +1,19 @@
 #stored_form{
     display:inline-block;
-    width:500px;
-    background-color:wheat;
+    width:200px;
+    margin-left:40%;
+    background-color:rgb(209, 196, 233);
+    padding:20px;
+
+}
+.employee_details{
+    margin:auto;
+    width:200px;
+    background:wheat;
+    border-radius:10px;
+    border:1px solid black;
+    margin-bottom:10px;
+    padding:10px 0;
+    text-align:center;
+    cursor:grabbing;
 }
