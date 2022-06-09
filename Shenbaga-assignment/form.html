@@ -11,78 +11,54 @@
 
 <body>
     <div id="form">
+        <h3>Form</h3>
         <form action="">
             <div id="name">
                 <label for="">Name</label>
-                <input type="text" placeholder="First Name" id="first-name" />
-                <input type="text" placeholder="Middle Name" id="second-name" />
-                <input type="text" placeholder="Last Name" id="last-name" />
+                <input type="text" placeholder="First Name" id="first-name" oninput="throttleFunction(first_name,1500)" />
+
+                <input type="text" placeholder="Last Name" id="last-name"
+                    oninput="throttleFunction(last_name,1500)" />
             </div>
 
             <div id="contact">
-                <label for="">Mobile number</label>
-                <input type="nmumber" name="" id="mobile-number">
-
-                <label for="">Date of Birth</label>
-                <input type="date" id="date-of-birth"><br><br>
-
                 <label for="">Email</label>
-                <input type="email" id="Email">
+                <input type="email" id="Email"  oninput="throttleFunction(email,4000)">
             </div>
 
             <div id="address">
-                <p>Address</p>
-                <div>
-                    <label for="">Parmanent Address</label> <br>
-                    <input type="text" placeholder="Street / village  Line 1" id="Line_one">
-                    <label for="">City</label>
-                    <input type="text" id="city">
-                    <label for="">State</label>
-                    <input type="text" id="state">
-                </div>
-                <div>
-                    <label for="">Post code</label>
-                    <input type="number" id="post-code">
-                </div>
+                <label for="">Permanent Address</label>
+                <input type="text" placeholder="Address" id="permanent-address"  oninput="throttleFunction(address,4000)">
             </div>
 
             <div id="marital">
                 <label for="">Marital Status:</label>
 
-                <input type="radio" value="Single" name="marital" id="Single-status">
+                <input type="radio" value="Single" name="marital" id="Single-status" oninput="throttleFunction(single,1000)">
                 <label for="single">Single</label> &nbsp;
 
-                <input type="radio" value="Married" name="marital" id="Married-status">
+                <input type="radio" value="Married" name="marital" id="Married-status" oninput="throttleFunction(Married,1000)">
                 <label for="Married">Married</label> &nbsp;
 
-                <input type="radio" value="Divorced" name="marital" id="Divorced-status">
+                <input type="radio" value="Divorced" name="marital" id="Divorced-status" oninput="throttleFunction(Divorced,1000)">
                 <label for="Divorced">Divorced</label>
-
             </div>
 
-            <p>Education</p>
-            <div id="education">
-                <label for="">School</label>
-                <input type="text" id="School">
-
-                <label for="">High School</label>
-                <input type="text" id="High-school">
-
-                <div>
-                    <label for="">Degree</label>
-                    <select name="" id="degree">
-                        <option>-------</option>
-                        <option value="Bachelor of Technology">B.Tech</option>
-                        <option value="Master of Technology">M.Tech</option>
-                        <option value="Bachelor of Science">Bsc</option>
-                        <option value="Master of Science">Msc</option>
-                        <option value="Bachelor of Commerce">B.com</option>
-                    </select>
-                </div>
+            <div>
+                <label>Degree</label>
+                <select id="degree" onchange="throttleFunction(education,1000)">
+                    <option>-------</option>
+                    <option value="Bachelor of Technology">B.Tech</option>
+                    <option value="Master of Technology">M.Tech</option>
+                    <option value="Bachelor of Science">Bsc</option>
+                    <option value="Master of Science">Msc</option>
+                    <option value="Bachelor of Commerce">B.com</option>
+                </select>
             </div>
-            
         </form>
-        <button id="Submit-button">Submit</button>
+
+        <button id="Save_information">Save info</button>
+        <button id="Submit-button">Submit and view</button>
     </div>
     <div id="display-information">
         <h2>Employee Information</h2>
