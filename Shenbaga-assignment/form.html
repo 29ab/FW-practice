@@ -15,38 +15,38 @@
         <form action="">
             <div id="name">
                 <label for="">Name</label>
-                <input type="text" placeholder="First Name" id="first-name" oninput="throttleFunction(first_name,1500)" />
+                <input type="text" placeholder="First Name" id="first-name" onkeyup="inputFirstName()"/>
 
                 <input type="text" placeholder="Last Name" id="last-name"
-                    oninput="throttleFunction(last_name,1500)" />
+                onkeyup="inputLastName()" />
             </div>
 
             <div id="contact">
                 <label for="">Email</label>
-                <input type="email" id="Email"  oninput="throttleFunction(email,4000)">
+                <input type="email" id="Email"  onkeyup="inputEmail()">
             </div>
 
             <div id="address">
-                <label for="">Permanent Address</label>
-                <input type="text" placeholder="Address" id="permanent-address"  oninput="throttleFunction(address,4000)">
+                <p>Permanent Address</p>
+                <textarea name="" id="permanent-address" cols="10" rows="5" onkeyup="inputAddress()"></textarea>
             </div>
 
             <div id="marital">
                 <label for="">Marital Status:</label>
 
-                <input type="radio" value="Single" name="marital" id="Single-status" oninput="throttleFunction(single,1000)">
+                <input type="radio" value="Single" name="marital" id="Single-status" onclick="inputStatusS()">
                 <label for="single">Single</label> &nbsp;
 
-                <input type="radio" value="Married" name="marital" id="Married-status" oninput="throttleFunction(Married,1000)">
+                <input type="radio" value="Married" name="marital" id="Married-status" onclick="inputStatusM()">
                 <label for="Married">Married</label> &nbsp;
 
-                <input type="radio" value="Divorced" name="marital" id="Divorced-status" oninput="throttleFunction(Divorced,1000)">
+                <input type="radio" value="Divorced" name="marital" id="Divorced-status" onclick="inputStatusD()">
                 <label for="Divorced">Divorced</label>
             </div>
 
             <div>
                 <label>Degree</label>
-                <select id="degree" onchange="throttleFunction(education,1000)">
+                <select id="degree" onchange="inputDegree()">
                     <option>-------</option>
                     <option value="Bachelor of Technology">B.Tech</option>
                     <option value="Master of Technology">M.Tech</option>
@@ -57,12 +57,29 @@
             </div>
         </form>
 
-        <button id="Save_information">Save info</button>
         <button id="Submit-button">Submit and view</button>
     </div>
     <div id="parent-display">
         <h3>Employee Information</h3>
-        <div id="display-information"></div>
+        <div id="display-information">
+            
+            <div>
+                <span id="fname"></span>
+                <span id="lname"></span>
+            </div>
+            <div>
+               <span id="display-email"></span>
+            </div>
+            <div>
+                <span id="display-address"></span>
+            </div>
+            <div>
+                <span id="display-maritalStatus"></span>
+            </div>
+            <div>
+                <span id="display-degree"></span>
+            </div>
+        </div>
     </div>
     
 </body>

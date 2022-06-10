@@ -15,17 +15,19 @@
 #contact > input{
     width:150px;
 }
-#address > div input{
-    width:150px;
+
+#address > textarea{
+    width:90%;
 }
 
 #education > input{
     width:150px;
-    /* border:1px solid red; */
 }
+
 div{
     margin-bottom:20px;
 }
+
 #marital > input{
     width:15px;
 } 
