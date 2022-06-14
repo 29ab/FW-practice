@@ -2,8 +2,6 @@ let data = JSON.parse(localStorage.getItem('employee_information'));
 
 let Show_result = document.getElementById('viewform');
 
-console.log(data.first_name);
-
 let details = document.createElement('div');
 details.setAttribute('class', 'employee_details');
 
