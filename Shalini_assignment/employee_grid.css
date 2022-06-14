@@ -8,18 +8,13 @@
 }
 
 #main{
-    /* border: 1px solid blue; */
     margin-top:30px;
     width: 100%;
     height: 250px;
-    /* justify-content: space-between; */
 }
 .tile{
     display:inline-block;
-    /* border: 1px solid red; */
-    float: left;
     position:relative;
-    /* margin:6px; */
     height: 100%;
     width: 14%;
     margin-right:30px;
@@ -27,10 +22,9 @@
     
 }
 .circle{
-    /* border:1px solid yellow; */
     position:absolute;
     top: 20px;
-    left:20px;
+    left:40px;
     width:150px;
     height:150px;
     border-radius:50%;
@@ -38,18 +32,16 @@
 }
 
 .details_section{
-    /* border:5px solid yellow; */
     position:absolute;
     display:inline-block;
     bottom:20px;
-    left:28px;
+    left:55px;
     text-align: center;
 }
 @media only screen and (max-width: 599px){
     .tile{
-        /* margin:auto; */
         width:70vw;
-        height: 70vh;
+        height: 50vh;
         margin-left:30px;
         margin-bottom:30px
     }
@@ -72,7 +64,7 @@
         text-align: center;
     }
     .details-size{
-        font-size:25px
+        font-size:25px;
     }
     
 }
@@ -84,7 +76,6 @@
         margin-bottom:30px;
     }
     .circle{
-        /* border:1px solid yellow; */
         position:absolute;
         top: 20px;
         left:50px;
@@ -98,7 +89,7 @@
         position:absolute;
         display:inline-block;
         bottom:20px;
-        left:50px;
+        left:60px;
         text-align: center;
     }
 }
@@ -123,7 +114,7 @@
     }
     
     .details_section{
-        /* border:5px solid yellow; */
+
         position:absolute;
         display:inline-block;
         bottom:20px;
@@ -142,7 +133,6 @@
     }
 
     .circle{
-        /* border:1px solid yellow; */
         position:absolute;
         top: 10px;
         left:35px;
@@ -150,12 +140,42 @@
         height:150px;
     }
     .details_section{
-        /* border:5px solid yellow; */
         position:absolute;
         display:inline-block;
         bottom:20px;
         left:50px;
         text-align: center;
     }
+    
+}
+
+@media only screen and (min-width:1201px){
+   
+.tile{
+    display:inline-block;
+    position:relative;
+    height: 100%;
+    width: 14%;
+    margin-right:30px;
+    background-color: rgb(236, 240, 241) ;
+    margin-bottom: 30px;
+    
+}
+.circle{
+    position:absolute;
+    top: 20px;
+    left:50px;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background-color:rgb(187, 222, 251);
+}
+
+.details_section{
+    position:absolute;
+    display:inline-block;
+    bottom:20px;
+    left:60px;
+}
     
 }
