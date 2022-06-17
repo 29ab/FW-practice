@@ -1,23 +1,14 @@
-#sortable {
-    display: inline-block;
-    width: 60%;
-    margin-left:20% ;
-    padding: 10px;
-    background-color: #EEEEEE;
-    border: 1px solid #546E7A;
+tr {
+    background-color: #C5CAE9;
 }
 
-#sortable div {
-    display: inline-block;
-    width: 95%;
-    margin: 0 3px 10px 3px;
-    padding: 0.6em;
-    height: 18px;
-    border: 3px solid #7986CB;
-    background-color: #C5CAE9;
-    text-align: center;
-    
+td,
+th {
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
-.items > span {
-    font-size: 18px;
+
+button {
+    margin-top: 15px;
 }

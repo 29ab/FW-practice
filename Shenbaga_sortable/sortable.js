@@ -1,64 +1,57 @@
-let lists = document.getElementById("sortable");
+let empData = document.getElementById("sortable");
 
-    let retrived_items = JSON.parse(localStorage.getItem('sortedList'));
+let retrivedData = JSON.parse(localStorage.getItem('sortedList'));
 
-    if (retrived_items === null) {
-        console.log("Nothing in localstorage");
-    }
-    else {
-        lists.innerHTML = " ";
-        retrived_items.forEach(function (Elements) {
-            
-            let unique_id = Elements.id;
+retrivedData.forEach(function (Elements,index) {
 
-            let element_div = document.createElement('div');
-            element_div.setAttribute("class", "items")
-            element_div.setAttribute("id", unique_id)
+    let tableRow = document.createElement("tr");
+    tableRow.setAttribute("id",index);
+    tableRow.setAttribute("class","dataRow")
 
-            let name = document.createElement('span');
-            name.innerHTML = Elements.name;
-            name.setAttribute("class", "names")
+    let Name = document.createElement("td");
+    Name.innerHTML = Elements.name;
+    let Email = document.createElement("td");
+    Email.innerHTML = Elements.email;
+    let Address = document.createElement("td");
+    Address.innerHTML = Elements.address;
+    let Designation = document.createElement("td");
+    Designation.innerHTML = Elements.roles;
 
-            // let email = document.createElement('span');;
-            // email.innerHTML = Elements.email + ", ";
+    tableRow.append(Name, Email, Address, Designation);
 
-            // let address = document.createElement('span');
-            // address.innerHTML = Elements.address + ", ";
-
-            // let workRole = document.createElement('span');
-            // workRole.innerHTML = Elements.roles;
-
-            element_div.append(name);
-
-            lists.append(element_div);
-
-        });
-
-    }
+    empData.append(tableRow);
+});
 
 
-    $(function () {
-        $("#sortable").sortable({
-            stop: function (event, ui) {
+$(function () {
+    $("#sortable").sortable({
+        stop: function (event, ui) {
 
-                var array = [];
-                let sorting = document.querySelectorAll("div > div");
-                console.log(sorting);
+            let rowAfterSorted = document.querySelectorAll(".dataRow");
 
-                sorting.forEach(function (el){
-                    let Id = el.getAttribute('id');
-                    let Name = el.innerText;
-                    console.log(Id, Name);
-                    let obj = {
-                        id:Id,
-                        name:Name,
+            rowAfterSorted.forEach(function (el,index) {
+                let id = el.getAttribute("id");
+                let Array = [];
+                $("#"+id).each(function(){
+                    var currentRow = $(this);
+                    let td1 = currentRow.find('td:eq(0)').text();
+                    let td2 = currentRow.find('td:eq(1)').text();
+                    let td3 = currentRow.find('td:eq(2)').text();
+                    let td4 = currentRow.find('td:eq(3)').text();
+                    
+                    Array.push(td1, td2, td3, td4);
+
+                    retrivedData[index] = {
+                        name:Array[0],
+                        email:Array[1],
+                        address:Array[2],
+                        roles:Array[3]
                     }
-                    console.log("Object", obj)
-                    array.push(obj);
                 })
-                // console.log("array",array);
                 
-                localStorage.setItem("sortedList", JSON.stringify(array));
-            }
-        });
+            });
+
+            localStorage.setItem("sortedList", JSON.stringify(retrivedData));
+        }
     });
+});
