@@ -36,15 +36,14 @@ prev.addEventListener("click",() => {
      
         return;
     }
-    count--
+    count--;
     goToSlide(count);
 })
 
 
 function goToSlide(slideNumber){
 
-    slide.style.transform = 
-    "translateX(-" + slideWidth * slideNumber + "px)";
+    slide.style.transform = "translateX(-" + slideWidth * slideNumber + "px)";
     count = slideNumber;
     setActiveClass();
 }

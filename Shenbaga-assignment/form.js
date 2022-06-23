@@ -1,11 +1,11 @@
 
 let Show_result = document.getElementById('display-information');
 
-let Employee_FName = document.querySelector('#first-name');
-let dbounce_Employee_Fname = document.getElementById('fname');
+let employeeFname = document.querySelector('#first-name');
+let dbounce_employeeFname = document.getElementById('fname');
 
 const UpdatedVlaue = () => {
-    dbounce_Employee_Fname.innerHTML = Employee_FName.value;
+    dbounce_employeeFname.innerHTML = employeeFname.value;
 }
 
 let debounceTimer;
@@ -14,10 +14,11 @@ const debounce = (callback,time) => {
     debounceTimer = window.setTimeout(callback,time)
 } 
 
-Employee_FName.addEventListener('input',()=> {
+employeeFname.addEventListener('input',()=> {
     debounce(UpdatedVlaue,200);
 },false);
 
+//-------------------------------------------------------------------
 
 let Employee_lname = document.getElementById('last-name');
 let debounceLname = document.getElementById('lname');
@@ -37,6 +38,9 @@ Employee_lname.addEventListener('input',()=> {
 },false);
 
 
+//-------------------------------------------------------------------
+
+
 let Employee_Email = document.getElementById('Email');
 let debouncedEmail = document.getElementById('display-email');
 
@@ -54,6 +58,7 @@ const updateEmail = () => {
     debouncedEmail.innerHTML = Employee_Email.value;
 }
 
+//-------------------------------------------------------------------
 
 let Employee_Address = document.getElementById('permanent-address');
 let debouncedAdderss = document.getElementById('display-address');
@@ -72,6 +77,8 @@ const UpdatedAddress = () => {
     debouncedAdderss.innerHTML = Employee_Address.value;
 }
 
+//-------------------------------------------------------------------
+
 let Employee_Single = document.getElementById('Single-status');
 let debouncedSingle = document.getElementById('display-maritalStatus');
 
@@ -88,6 +95,7 @@ const debouncedforSingleStatus = (callback,time) => {
 const UpdatedSingleStatus = () =>{
     debouncedSingle.innerHTML = Employee_Single.value;
 };
+
 
 let Employee_Married = document.getElementById('Married-status');
 let debouncedMarried = document.getElementById('display-maritalStatus');
@@ -123,6 +131,8 @@ const debouncedforDivorcedStatus = (callback,time) => {
 const UpdatedDivorcedStatus = () =>{
     debouncedDivorced.innerHTML = Employee_Divorced.value;
 };
+
+//-------------------------------------------------------------------
 
 let Employee_Degree = document.getElementById('degree');
 
@@ -160,6 +170,7 @@ document.getElementById('Submit-button').addEventListener('click', function(){
         degree: Employee_degree,
     }
 
+    
     localStorage.setItem("employee_information", JSON.stringify(employee_details));
 
     document.querySelector('#first-name').value = " "
@@ -170,6 +181,4 @@ document.getElementById('Submit-button').addEventListener('click', function(){
     document.getElementById('Married-status').checked = false;
     document.getElementById('Divorced-status').checked = false;
     document.getElementById('degree').value = " ";
-
-    window.location.href = "viewform.html";
 })
