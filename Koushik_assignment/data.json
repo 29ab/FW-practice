@@ -30,22 +30,50 @@
     {
         "numb":"5",
         "name":"Nanu",
-        "place":"Orisa",
+        "place":"Orissa",
         "location":"Hydrabad",
         "department":"Software Engineer(Fontend)"
     },
     {
         "numb":"6",
-        "name":"Nanu",
-        "place":"Orisa",
+        "name":"kamal",
+        "place":"Orissa",
         "location":"Hydrabad",
         "department":"Software Engineer(Fontend)"
     },
     {
-        "numb":"6",
-        "name":"Nanu",
-        "place":"Orisa",
+        "numb":"7",
+        "name":"kamal",
+        "place":"Orissa",
+        "location":"Hydrabad",
+        "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"8",
+        "name":"kamal",
+        "place":"Orissa",
+        "location":"Hydrabad",
+        "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"9",
+        "name":"kamal",
+        "place":"Orissa",
+        "location":"Hydrabad",
+        "department":"Software Engineer(Fontend)"
+    },{
+        "numb":"10",
+        "name":"kamal",
+        "place":"Orissa",
+        "location":"Hydrabad",
+        "department":"Software Engineer(Fontend)"
+    },
+    {
+        "numb":"11",
+        "name":"kamal",
+        "place":"Orissa",
         "location":"Hydrabad",
         "department":"Software Engineer(Fontend)"
     }
+
 ]

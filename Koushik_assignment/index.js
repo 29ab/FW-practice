@@ -61,6 +61,7 @@ let Square = document.getElementById("display_cards");
         let side_details = document.getElementById("Right_side");
         side_details.innerHTML = "";
         side_details.style.width = "250px";
+        side_details.style.display = "inline-block"
 
         let Name = document.createElement("p");
         let Location = document.createElement("p");
@@ -75,12 +76,11 @@ let Square = document.getElementById("display_cards");
         side_details.append(Cross,Name, Location, Department);
 
         Cross.onclick = () => {
-            console.log(arguments)
+            // console.log(arguments)
             minimize_side_model();
         }
     }
 
     function minimize_side_model(){
-            document.getElementById("Right_side").style.width = "0px";
-            document.getElementById("display").style.marginRight = "0px";
+            document.getElementById("Right_side").style.display = "none";
         }
